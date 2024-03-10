@@ -1,6 +1,10 @@
 # PASS_W3
 Welcome to week 3's coding activity
-Note: you're not allowed to use in-built lists, sets and dictionaries
+- Note: you're not allowed to use in-built lists, sets and dictionaries
+- To run tests, open terminal then:
+```sh
+python3 run_tests.py # and follow command line instructions
+```
 
 
 #### Q1: Valid Parentheses (adapted from [leetcode](https://leetcode.com/problems/valid-parentheses/description/))
@@ -35,5 +39,3 @@ Input: nums = [-3,-1,-3,-4,-2], Output: -3
 
 *Example 3:*
 Input: nums = [-3,-3,-3,-3,-3], Output: -3
-
-- Extension: can you solve this problem without any collection data structure (i.e. without lists, stacks, sets, queues)
