@@ -1,7 +1,6 @@
 import argparse
 import re
 import unittest
-from io import StringIO
 
 if __name__ == "__main__":
 
@@ -41,7 +40,10 @@ if __name__ == "__main__":
         except ValueError:
             pass
 
-    suite = unittest.defaultTestLoader.discover('test_actual' if args.for_ed else '.')
+    suite = unittest.defaultTestLoader.discover('.')
+    
+    print("task: ", args.task)
+
     for s in suite:
         for t in s:
             if "FailedTest" in str(type(t)):
@@ -55,9 +57,5 @@ if __name__ == "__main__":
                     marked_remove.add(t2)
             for t2 in marked_remove:
                 t._tests.remove(t2)
-    if args.for_ed:
-        f = StringIO("")
-        print(f.getvalue())
-    else:
-        runner = unittest.runner.TextTestRunner()
-        runner.run(suite)
+    runner = unittest.runner.TextTestRunner()
+    runner.run(suite)
