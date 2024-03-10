@@ -13,7 +13,7 @@ class Test_Q1(unittest.TestCase):
     @number("1.2")
     def test_extra(self):
         self.assertTrue(valid_parentheses("([]{})"))
-        self.assertTrue(valid_parentheses("()[{}"))
+        self.assertFalse(valid_parentheses("()[{}"))
         self.assertFalse(valid_parentheses("(()"))
 
 if __name__ == '__main__':

@@ -22,7 +22,7 @@ class Test_Q2(unittest.TestCase):
     def test_extra(self):
         self.assertEqual(find_duplicate_negative_number(get_array_list([-2,-3])), -1)
         self.assertEqual(find_duplicate_negative_number(get_array_list([-3])), -1)
-        self.assertEqual(find_duplicate_negative_number(get_array_list([-9,-3,-4,-5,-6,-7,-8,-9])), -1)
+        self.assertEqual(find_duplicate_negative_number(get_array_list([-9,-3,-4,-5,-6,-7,-8,-9])), -9)
 
 if __name__ == '__main__':
     unittest.main()
